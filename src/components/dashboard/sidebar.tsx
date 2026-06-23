@@ -43,8 +43,8 @@ export function Sidebar() {
                   : "text-muted-foreground hover:bg-muted/50 hover:text-white"
               )}
             >
-              <item.icon className={cn("h-5 w-5 md:h-5 md:w-5 mb-1 md:mb-0", isActive ? "text-primary drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" : "text-muted-foreground")} />
-              <span className="md:inline hidden">{item.name}</span>
+              <item.icon className={cn("h-5 w-5 md:h-5 md:w-5 mb-0.5 md:mb-0", isActive ? "text-primary drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" : "text-muted-foreground")} />
+              <span className="text-[9px] md:text-sm leading-tight block md:inline whitespace-nowrap overflow-hidden text-ellipsis max-w-[50px] md:max-w-none">{item.name === "My AI Plan" ? "AI Plan" : item.name}</span>
             </Link>
           );
         })}
