@@ -2,13 +2,12 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { Search, MessageSquare, Bell, Diamond, Sparkles, X, Settings, HelpCircle, LogOut } from "lucide-react";
+import { Search, MessageSquare, Bell, Diamond, Sparkles, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useStore } from "@/store/useStore";
 import { supabase } from "@/lib/supabase";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
 
 export function Header() {
@@ -63,41 +62,15 @@ export function Header() {
       <div className="flex items-center gap-2 md:gap-3">
         <h2 className="text-lg md:text-2xl font-bold tracking-tight text-white hidden sm:block">Welcome, {coachName}!</h2>
         <h2 className="text-xl font-bold tracking-tight text-white sm:hidden">FF</h2>
-        <DropdownMenu>
-          <DropdownMenuTrigger className="outline-none focus:outline-none rounded-full ring-1 ring-white/20 hover:ring-primary/50 transition-all cursor-pointer overflow-hidden flex ml-2">
-            <Avatar className="h-7 w-7 md:h-8 md:w-8 bg-primary/20 text-primary pointer-events-none">
-              {coachAvatar ? (
-                <AvatarImage src={coachAvatar} className="object-cover" />
-              ) : (
-                <AvatarFallback>{coachName[0]?.toUpperCase()}</AvatarFallback>
-              )}
-            </Avatar>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56 bg-[#131B23] border-white/10 text-white mt-2" align="start">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator className="bg-white/5" />
-            <Link href="/dashboard/settings" className="block w-full">
-              <DropdownMenuItem className="cursor-pointer hover:bg-white/5 focus:bg-white/5 w-full">
-                <Settings className="mr-2 h-4 w-4" />
-                <span>Settings</span>
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/dashboard/support" className="block w-full">
-              <DropdownMenuItem className="cursor-pointer hover:bg-white/5 focus:bg-white/5 w-full">
-                <HelpCircle className="mr-2 h-4 w-4" />
-                <span>Support</span>
-              </DropdownMenuItem>
-            </Link>
-            <DropdownMenuSeparator className="bg-white/5" />
-            <DropdownMenuItem onClick={() => {
-              localStorage.removeItem('fitforge_session');
-              router.push('/login');
-            }} className="cursor-pointer text-red-400 hover:text-red-400 hover:bg-red-400/10 focus:bg-red-400/10 focus:text-red-400">
-              <LogOut className="mr-2 h-4 w-4" />
-              <span>Log out</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Link href="/dashboard/settings" className="rounded-full ring-1 ring-white/20 hover:ring-primary/50 transition-all cursor-pointer overflow-hidden flex ml-2 outline-none focus:outline-none">
+          <Avatar className="h-7 w-7 md:h-8 md:w-8 bg-primary/20 text-primary">
+            {coachAvatar ? (
+              <AvatarImage src={coachAvatar} className="object-cover" />
+            ) : (
+              <AvatarFallback>{coachName[0]?.toUpperCase()}</AvatarFallback>
+            )}
+          </Avatar>
+        </Link>
       </div>
       
       <div className="flex items-center space-x-6">
