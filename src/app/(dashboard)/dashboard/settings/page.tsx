@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { User, Bell, CreditCard, LogOut, Shield, CheckCircle2, AlertTriangle } from "lucide-react";
+import { User, Bell, CreditCard, LogOut, Shield, CheckCircle2, AlertTriangle, HelpCircle } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -368,6 +368,29 @@ export default function SettingsPage() {
         </motion.div>
 
       </div>
+
+      {/* Support Section */}
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+        <div className="bg-[#131B23] border border-white/5 rounded-2xl overflow-hidden shadow-xl mt-6">
+          <div className="p-6 border-b border-white/5 flex items-center gap-4">
+            <div className="p-3 bg-purple-500/10 rounded-xl">
+              <HelpCircle className="h-6 w-6 text-purple-500" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">Help & Support</h3>
+              <p className="text-sm text-muted-foreground">Need assistance? Talk to our AI support.</p>
+            </div>
+          </div>
+          <div className="p-6">
+            <button 
+              onClick={() => router.push('/dashboard/support')}
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg text-sm font-bold transition-colors w-full sm:w-auto shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+            >
+              <HelpCircle className="h-4 w-4" /> Contact Support
+            </button>
+          </div>
+        </div>
+      </motion.div>
 
       {/* Pricing Modal */}
       <Dialog open={showPricing} onOpenChange={setShowPricing}>
