@@ -66,7 +66,7 @@ export default function LoginPage() {
             <Activity className="h-8 w-8 text-primary" />
           </div>
           <h2 className="text-2xl font-bold text-white tracking-tight">
-            {isSignUp ? "Create an Account" : "Welcome to Fitly AI"}
+            {isSignUp ? "Create an Account" : "Welcome to FitForge"}
           </h2>
           <p className="text-muted-foreground text-sm mt-1">
             {isSignUp ? "Start scaling your business today." : "Sign in to manage your coaching business."}

@@ -145,9 +145,9 @@ export function Header() {
             </DialogTrigger>
             <DialogContent className="bg-[#131B23] border-white/10 text-white sm:max-w-md">
               <DialogHeader>
-                <DialogTitle className="flex items-center gap-2"><Diamond className="h-5 w-5 text-[#FFD700]"/> Upgrade to Fitly AI Pro</DialogTitle>
+                <DialogTitle className="flex items-center gap-2"><Diamond className="h-5 w-5 text-[#FFD700]"/> Upgrade to FitForge Pro</DialogTitle>
                 <DialogDescription className="text-muted-foreground pt-4 space-y-4">
-                  <span className="block">Unlock the full potential of your coaching business with Fitly AI Pro!</span>
+                  <span className="block">Unlock the full potential of your coaching business with FitForge Pro!</span>
                   <span className="block space-y-2 text-white">
                     <span className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-primary" /> Unlimited AI Generations</span>
                     <span className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-primary" /> Advanced Client Analytics</span>

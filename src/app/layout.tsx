@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fitly AI | AI Fitness Coach Dashboard",
+  title: "FitForge | AI Fitness Coach Dashboard",
   description: "AI-Powered Workout Planner & Client Management for Fitness Coaches",
 };
 

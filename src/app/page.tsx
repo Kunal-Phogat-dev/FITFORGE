@@ -8,7 +8,7 @@ export default function LandingPage() {
       <nav className="container mx-auto px-6 py-6 flex items-center justify-between border-b border-white/5 relative z-10">
         <div className="flex items-center gap-2">
           <Activity className="h-8 w-8 text-primary" />
-          <span className="text-2xl font-bold tracking-tight">Fitly AI</span>
+          <span className="text-2xl font-bold tracking-tight">FitForge</span>
         </div>
         <div className="hidden md:flex gap-8 text-sm font-medium text-muted-foreground">
           <a href="#features" className="hover:text-white transition-colors">Features</a>
@@ -32,7 +32,7 @@ export default function LandingPage() {
 
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-primary mb-8">
           <Zap className="h-4 w-4" />
-          <span>New: Fitly AI AI Gemini 2.5 Integration</span>
+          <span>New: FitForge Gemini 2.5 Integration</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
@@ -130,7 +130,7 @@ export default function LandingPage() {
           <TestimonialCard 
             name="Sarah Jenkins"
             role="Online Fitness Coach"
-            content="Fitly AI has completely changed my workflow. What used to take me 3 hours on Sunday now takes 15 minutes. The AI is incredibly accurate."
+            content="FitForge has completely changed my workflow. What used to take me 3 hours on Sunday now takes 15 minutes. The AI is incredibly accurate."
             avatar="https://i.pravatar.cc/150?u=sarah"
           />
           <TestimonialCard 
@@ -197,7 +197,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black py-12 text-center text-muted-foreground text-sm">
-        <p>© 2026 Fitly AI AI. All rights reserved.</p>
+        <p>© 2026 FitForge. All rights reserved.</p>
       </footer>
     </div>
   );

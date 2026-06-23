@@ -34,7 +34,7 @@ export default function SettingsPage() {
   const [notifications, setNotifications] = useState([
     { id: 'activity', title: "Client Activity", desc: "When a client completes a workout.", active: true },
     { id: 'reports', title: "Weekly Reports", desc: "Your roster's weekly performance summary.", active: true },
-    { id: 'promos', title: "Marketing & Promos", desc: "Updates on new Fitly AI features.", active: false },
+    { id: 'promos', title: "Marketing & Promos", desc: "Updates on new FitForge features.", active: false },
   ]);
 
   useEffect(() => {

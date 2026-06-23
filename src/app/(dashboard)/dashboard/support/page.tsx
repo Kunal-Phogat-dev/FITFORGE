@@ -9,7 +9,7 @@ export default function SupportPage() {
   const [input, setInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [messages, setMessages] = useState<{role: 'user'|'ai', text: string}[]>([
-    { role: 'ai', text: "Hello! I'm the Fitly AI Support AI. How can I assist you with your mock project today?" }
+    { role: 'ai', text: "Hello! I'm the FitForge Support AI. How can I assist you with your mock project today?" }
   ]);
 
   const handleSend = () => {
@@ -76,7 +76,7 @@ export default function SupportPage() {
           <div className="bg-[#1E293B] p-4 flex justify-between items-center border-b border-white/5">
             <div className="flex items-center gap-2">
               <MessageSquare className="h-4 w-4 text-primary" />
-              <span className="font-bold text-white text-sm">Fitly AI AI Support</span>
+              <span className="font-bold text-white text-sm">FitForge Support</span>
             </div>
             <button onClick={() => setChatOpen(false)} className="text-muted-foreground hover:text-white">
               <X className="h-4 w-4" />
